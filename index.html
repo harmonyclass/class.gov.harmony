@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Government of Harmony</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background-color: #4aa9e0; /* Sky Blue */
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 65px;
+      margin-right: 15px;
+      border-radius: 8px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700; /* Golden Yellow */
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #4aa9e0, #87ceeb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .about h2 {
+      color: #4aa9e0;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* News Section */
+    .news {
+      padding: 50px 20px;
+      background-color: #f0f8ff; /* light blue */
+      text-align: center;
+    }
+
+    .news h2 {
+      color: #4aa9e0;
+      margin-bottom: 25px;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .news-card {
+      background: white;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-card h3 {
+      color: #4aa9e0;
+      margin-bottom: 10px;
+    }
+
+    .news-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffd700; /* Golden Yellow */
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #4aa9e0;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="cgh.jpg" alt="Class Government Logo"> <!-- Your uploaded logo -->
+      <h1>Class Government of Harmony</h1>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to the Class Government of Harmony</h1>
+    <p>Promoting unity, leadership, and excellence among students.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      The Class Government of Harmony is built on collaboration, respect, and leadership. 
+      Our mission is to foster an inclusive and progressive environment where every student 
+      has a voice, and every initiative is directed toward growth and unity.
+    </p>
+  </section>
+
+  <!-- News Section -->
+  <section class="news">
+    <h2>📢 News & Updates</h2>
+    <div class="news-container">
+      <div class="news-card">
+        <h3>Leadership Workshop</h3>
+        <p>We will hold a leadership and teamwork workshop on September 15, 2025, at the school auditorium. Everyone is encouraged to join!</p>
+      </div>
+      <div class="news-card">
+        <h3>Clean & Green Project</h3>
+        <p>Our class government is launching a cleanliness campaign starting next week. Let’s work together for a cleaner school environment!</p>
+      </div>
+      <div class="news-card">
+        <h3>Sports Festival</h3>
+        <p>The annual sports festival will begin on October 10, 2025. Stay tuned for team assignments and practice schedules.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Class Government of Harmony. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript for Menu -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
